@@ -1,11 +1,13 @@
-## Webdev Starter 🚀
+## Image Uploader 🏙
 
-This is a light-weight boilerplate for quickstarting a new web development project.
+An image uploader for uploading one or multiple JPG or PNG images.
 
-Its aim is to be continuously optimized for speed, simplicity, and ease of use.
+This is a frontend for a [NodeJS backend](https://github.com/nrademacher/node-image-upload) which provides the uploading functionality.
 
-### Current setup
+### Features
 
-* [Vite](https://github.com/vitejs/vite) as dev server/bundler, 
-* [React](https://github.com/facebook/react) as JS library, 
-* [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) as styling solution
+* Drag and drop one or multiple images or select them from a folder
+* Track the upload progress
+* See the uploaded images and copy their links to the clipboard
+
+

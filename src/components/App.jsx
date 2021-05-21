@@ -55,8 +55,8 @@ const App = () => {
           return (
             <>
               <a href={link.value} target="_blank"><img src={link.value} alt={`image ${i + 1}`} className="rounded-md mb-2 max-w-xl" /></a>
-              <article key={link.value} className="mb-4">
-                <span className="p-2 text-xs bg-gray-100 border-2 border-gray-200 rounded mr-2">
+              <article key={link.value} className="flex w-full md:w-auto flex-col md:flex-row mb-4">
+                <span className="p-2 text-[10px] w-full md:w-auto md:text-xs bg-gray-100 border-2 border-gray-200 rounded mb-1 md:mb-0 mr-2">
                   {link.value}
                 </span>
                 <CopyToClipboard
@@ -66,7 +66,7 @@ const App = () => {
                     setCopyLinks(copyLinks);
                   }}
                 >
-                  <button className="p-2 text-sm text-[#2484ff] font-semibold bg-[#e6e6e6] rounded transition-all duration-200 hover:bg-[#2484ff] hover:text-[#e6e6e6]">
+                  <button className="p-2 text-xs md:text-sm text-[#2484ff] font-semibold bg-[#e6e6e6] rounded transition-all duration-200 hover:bg-[#2484ff] hover:text-[#e6e6e6]">
                     Copy to clipboard
                   </button>
                 </CopyToClipboard>

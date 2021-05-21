@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Dropzone from 'react-dropzone-uploader';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+// import CopyToClipboard from 'react-copy-to-clipboard';
 
 const App = () => {
   const [copyLinks, setCopyLinks] = useState([]);

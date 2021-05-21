@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Dropzone from 'react-dropzone-uploader';
 import 'react-dropzone-uploader/dist/styles.css';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 const App = () => {
   const [copyLinks, setCopyLinks] = useState([]);
@@ -33,7 +33,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="py-4 text-center font-bold text-xl">Image Uploader (JPG & PNG)</h1>
+      <h1 className="py-4 text-center font-bold text-xl">
+        Image Uploader (JPG & PNG)
+      </h1>
       <section>
         <Dropzone
           getUploadParams={getUploadParams}
@@ -54,8 +56,17 @@ const App = () => {
         {copyLinks.map((link, i) => {
           return (
             <>
-              <a href={link.value} target="_blank"><img src={link.value} alt={`image ${i + 1}`} className="rounded-md mb-2 max-w-xl" /></a>
-              <article key={link.value} className="flex w-full md:w-auto flex-col md:flex-row mb-4">
+              <a href={link.value} target="_blank">
+                <img
+                  src={link.value}
+                  alt={`image ${i + 1}`}
+                  className="rounded-md mb-2 max-w-xl"
+                />
+              </a>
+              <article
+                key={link.value}
+                className="flex w-full md:w-auto flex-col md:flex-row mb-4"
+              >
                 <span className="p-2 text-[10px] w-full md:w-auto md:text-xs bg-gray-100 border-2 border-gray-200 rounded mb-1 md:mb-0 mr-2">
                   {link.value}
                 </span>
